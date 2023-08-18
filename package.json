@@ -1,0 +1,18 @@
+{
+  "name": "hugo-light-theme",
+  "version": "1.0.0",
+  "author": "alex-birchman",
+  "license": "MIT",
+  "scripts": {
+    "dev:tailwind": "pnpm tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/styles.css --watch",
+    "dev:server": "hugo server -D --watch --disableFastRender --themesDir=../ --source=../hugo-light-site",
+    "build": "hugo --gc --minify --themesDir=../ --source=../hugo-light-site",
+    "dev": "killall hugo & pnpm dev:tailwind & pnpm dev:server"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "tailwindcss": "^3.3.3"
+  }
+}

@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<div class="mt-8">
+  {{ range where .Site.RegularPages "Section" "post" }}
+  <section class="relative my-16 first-of-type:mt-0 last-of-type:mb-0">
+    <a
+      class="!my-0 block pb-2 text-3xl font-semibold no-underline hover:underline"
+      href="{{ .Permalink }}"
+      >{{ .Title }}</a
+    >
+    <time class="text-xl antialiased opacity-80"
+      >{{ .Date | time.Format ":date_medium" }}</time
+    >
+    <div class="!my-0 text-lg">{{ .Summary }}</div>
+  </section>
+  {{ end }}
+</div>
+
+{{ end }}

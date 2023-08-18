@@ -1,0 +1,63 @@
+<header class="mx-auto flex max-w-3xl items-center px-8 py-8">
+  <div class="mr-auto">
+    <a class="text-4xl font-semibold" href="{{ `` | absURL }}"
+      >{{ .Site.Title}}</a
+    >
+  </div>
+
+  <div class="btn-menu cursor-pointer md:hidden">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="h-6 w-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
+    </svg>
+  </div>
+
+  <div class="list-menu absolute z-50 hidden border border-black bg-white p-6">
+    {{ with site.Menus.main }}
+    <nav class="flex flex-col space-y-2">
+      {{ range . }}
+      <a class="block text-2xl font-semibold hover:underline" href="{{ .URL }}"
+        >{{ .Name }}</a
+      >
+      {{ end }}
+    </nav>
+    {{ end }}
+  </div>
+
+  <script>
+    const listMenu = document.querySelector('.list-menu');
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', (element) => {
+      listMenu.classList.toggle('hidden');
+
+      const btnMenuRect = btnMenu.getBoundingClientRect();
+      listMenu.style.left = `${
+        btnMenuRect.left - listMenu.offsetWidth + btnMenu.clientWidth
+      }px`;
+      listMenu.style.top = `${btnMenuRect.bottom}px`;
+    });
+  </script>
+
+  {{ with site.Menus.main }}
+  <nav class="hidden flex-row items-center space-x-6 md:visible md:flex">
+    {{ range . }}
+    <a
+      class="block text-center text-2xl font-semibold hover:underline"
+      href="{{ .URL }}"
+      >{{ .Name }}</a
+    >
+    {{ end }}
+  </nav>
+  {{ end }}
+  <!---->
+</header>

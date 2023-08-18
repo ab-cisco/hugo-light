@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<article class="pt-8">
+  <h1 class="!my-0 pb-8 text-5xl font-semibold">{{ .Title }}</h1>
+  {{ if (in .File.Dir "post") }}
+  <time class="text-xl antialiased opacity-80"
+    >{{ .Date | time.Format ":date_medium" }}</time
+  >
+  {{ end }}
+  <section>{{ .Content }}</section>
+</article>
+
+{{ end }}
