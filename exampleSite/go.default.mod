@@ -1,3 +1,3 @@
 module hugo-light
 
-go 1.11
+go 1.20
