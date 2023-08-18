@@ -13,4 +13,4 @@ features = ["simple", "light", "fast", "clean"]
   name = "Aleksandr Berezin"
   homepage = "https://berezin.dev"
 
-min_version = "0.57.1"
+min_version = "0.117.0"
