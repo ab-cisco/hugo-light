@@ -1,3 +1,3 @@
-module github.com/alex-birchman/hugo-ligh
+module github.com/alex-birchman/hugo-light
 
 go 1.21
