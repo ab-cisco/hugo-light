@@ -6,3 +6,8 @@
 
 ### NPM ###
 /node_modules
+
+### Builded hugo ###
+/exampleSite/public
+/exampleSite/go.mod
+/exampleSite/go.sum
