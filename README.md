@@ -1,6 +1,11 @@
-# Light
+# Light | [Demo](https://hugo-light.vercel.app)
 
-Simple, light and fast theme.
+Simple, light and fast theme for [hugo](https://gohugo.io/).
+
+## Overview
+![desktop](images/screenshot.png)
+
+<img alt="mobile" src="images/mobile.png" width="300">
 
 ## Install
 
@@ -36,4 +41,4 @@ Open `config.toml` or `hugo.toml`, remove the `theme` line (if present) and add 
 
 ## License
 
-[MIT License](https://github.com/alex-birchman/hugo-light/blob/master/LICENSE) (c) [alex-birchman](https://berezin.dev/)
+Distributed under the MIT License. See `LICENSE` for more information.
