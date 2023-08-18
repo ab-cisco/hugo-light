@@ -7,14 +7,9 @@
   />
 
   <!-- Styles & Scripts -->
-  {{ $styles := resources.Get "css/styles.css" }}
+  {{ $styles := resources.Get "css/styles.css" | minify }}
   <!---->
-  {{ $custom := resources.Get "css/custom.css" }}
-  <!---->
-  {{ $css := slice $styles $custom | resources.Concat "css/styles.css" | minify
-  }} {{ end }}
-
-  <link rel="preload stylesheet" as="style" href="{{ $css.Permalink }}" />
+  <link rel="preload stylesheet" as="style" href="{{ $styles.Permalink }}" />
 
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
