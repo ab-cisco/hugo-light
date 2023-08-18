@@ -6,8 +6,10 @@
   "scripts": {
     "dev:tailwind": "pnpm tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/styles.css --watch",
     "dev:server": "hugo server -D --watch --disableFastRender --themesDir=../.. --source=exampleSite",
-    "build": "hugo --gc --minify --themesDir=../.. --source=exampleSite",
-    "dev": "killall hugo & pnpm dev:tailwind & pnpm dev:server"
+    "build:go": "cp exampleSite/go.default.mod exampleSite/go.mod",
+    "build:generate": "hugo --gc --minify --themesDir=../.. --source=exampleSite --config=go.toml,hugo.toml",
+    "dev": "killall hugo & pnpm dev:tailwind & pnpm dev:server",
+    "build": "pnpm build:go & pnpm build:generate"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",

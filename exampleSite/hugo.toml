@@ -1,4 +1,4 @@
-baseURL = "https://gohugo.io"
+baseURL = "https://hugo-light.vercel.app/"
 title = "Light"
 author = "alex-birchman"
 copyright = "Copyright © 2008–2019, Steve Francia and the alex-birchman; all rights reserved."
