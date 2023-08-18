@@ -12,7 +12,7 @@
   {{ $custom := resources.Get "css/custom.css" }}
   <!---->
   {{ $css := slice $styles $custom | resources.Concat "css/styles.css" | minify
-  }}
+  }} {{ end }}
 
   <link rel="preload stylesheet" as="style" href="{{ $css.Permalink }}" />
 
