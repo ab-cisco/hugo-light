@@ -7,8 +7,4 @@
     body {
     @apply h-full;
   }
-
-  p {
-   font-size: 18px; 
-  }
 }
