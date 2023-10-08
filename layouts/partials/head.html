@@ -9,7 +9,14 @@
   <!-- Styles & Scripts -->
   {{ $styles := resources.Get "css/styles.css" | minify }}
   <!---->
+  {{ $stylesHighlight := resources.Get "css/highlight.css" | minify }}
+  <!---->
   <link rel="preload stylesheet" as="style" href="{{ $styles.Permalink }}" />
+  <link
+    rel="preload stylesheet"
+    as="style"
+    href="{{ $stylesHighlight.Permalink }}"
+  />
 
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
